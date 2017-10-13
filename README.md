@@ -11,7 +11,6 @@ VueJS Component, para la reprensentación de tablas.
  */
 {
 	"dataSource": "[]", // array de datos
-	"q": { "value": "some value", "field" : "name" }, // Buscar
 	"orderBy": {"field": "name", "type": "DESC"}, // Campo por el cual se va a ordenar
 	"initFrom": 0, // Número de registros por peticion
 	"totalRecords" : 10000, // Cantidad de registros en la base de datos para la paginacion
