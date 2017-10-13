@@ -10,12 +10,13 @@ VueJS Component, para la reprensentación de tablas.
  *  Nota: todos estos campos son requeridos por el component
  */
 {
-	"endPoint": "http://example.com/articles", // url a la cual se va a lanzar la consulta
+	"dataSource": "[]", // array de datos
 	"q": { "value": "some value", "field" : "name" }, // Buscar
 	"orderBy": {"field": "name", "type": "DESC"}, // Campo por el cual se va a ordenar
 	"initFrom": 0, // Número de registros por peticion
 	"totalRecords" : 10000, // Cantidad de registros en la base de datos para la paginacion
 	"records2show" : 10 // Cantidad de registros a mostar por cada pagina
+	"changePage": "function("prev" || "next", obj)"
 }
 ```
 
@@ -31,4 +32,6 @@ VueJS Component, para la reprensentación de tablas.
 	"event": "function(obj)", // Eventos "Esta parte esta por definir"
 	"enum" : [ { "value":"some value", "display": "text" } ] // Select options o checkox value 
 }
-```# usc-table
+
+Nota: La palabra obj hace referencia al objeto del primer JSON que son los datos q recibe el componente sin el "dataSource" y el "changePage"
+```
