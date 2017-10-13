@@ -24,7 +24,7 @@ VueJS Component, para la reprensentación de tablas.
 ```javascript
 /**
  * Estos son los valores para cada campo de la tabla
- * Nota: Solo el value es requerido
+ * Nota: Solo "value" es requerido
  */
 {
 	"type": "text || select || checkbok",  // Tipo del campo
@@ -33,5 +33,7 @@ VueJS Component, para la reprensentación de tablas.
 	"enum" : [ { "value":"some value", "display": "text" } ] // Select options o checkox value 
 }
 
-Nota: La palabra obj hace referencia al objeto del primer JSON que son los datos q recibe el componente sin el "dataSource" y el "changePage"
 ```
+
+### Nota: 
+La palabra obj hace referencia al objeto del primer JSON que son los datos que recibe el componente sin el "dataSource" y el "changePage"
