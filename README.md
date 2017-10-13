@@ -6,11 +6,12 @@ VueJS Component, para la reprensentación de tablas.
 ```javascript
 /**
  *  Estos son los valores que seran enviados en la petición para formar la consulta sql
- *  [ q, orderBy, initFrom ]
+ *  [ q, orderBy, initFrom ] Estos datos son bidireccionales
  *  Nota: todos estos campos son requeridos por el component
  */
 {
 	"dataSource": "[]", // array de datos
+	"q": { "value": "some value", "field" : "name" }, // Buscar
 	"orderBy": {"field": "name", "type": "DESC"}, // Campo por el cual se va a ordenar
 	"initFrom": 0, // Número de registros por peticion
 	"totalRecords" : 10000, // Cantidad de registros en la base de datos para la paginacion
