@@ -1,6 +1,22 @@
-<div>
-	A custom component !
-	<span class="title">{{ name }}</span>
-	<br> 
-	<input type="text" v-model="$parent.name"/>
+<div id="usc-table">
+
+	<table>
+		<thead>
+			<tr>
+				<td>uno</td>
+				<td>dos</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr v-for="(item, index) in dataSource">
+				<td>
+					<span @click="item.event(this)" v-if="item.type === 'text'">
+						{{ item.value }}
+					</span>
+				</td>
+				<td>1</td>
+			</tr>
+		</tbody>
+	</table>
+
 </div>

@@ -8,10 +8,8 @@
 </head>
 <body>
 	<div id="app">
-		<input type="text" v-model="name">
-		<br><br>
 		<!-- prueba el componente -->
-		<component-name :name="name"></component-name>
+		<component-name :data-source="dataSource" :init-from="initFrom"></component-name>
 	</div>
 
 	<script src="js/main.js"></script>
@@ -19,8 +17,31 @@
 		document.addEventListener("DOMContentLoaded", function(event) {
 			new Vue({
 				el: '#app',
-				data: {
-					name: 'name'
+				methods: {
+					test: function(e) {
+						console.log(e);
+					}
+				},
+				data: function() {
+					var _this = this;
+					console.log(_this);
+					return {
+						initFrom: 0,
+						dataSource: [
+							{
+								type: "text",  
+								value: 'value0', 
+								event: _this.test, 
+								enum : [ { "value":"some value", "display": "text" } ]
+							},
+							{
+								type: "select",  
+								value: "some value", 
+								// event: "function(obj)", 
+								enum : [ { "value":"some value", "display": "text" } ]
+							}
+						]
+					} 
 				}
 			});
 		});
