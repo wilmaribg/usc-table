@@ -6,9 +6,10 @@ Paquete de tareas gulp para la creación de componentes Vue.js
 
 Para desccargar y empezar a trabajar seguir los siguientes comandos
 
-1. $ git clone https://github.com/wilmaribg/usc-model-component.git
-2. $ npm install
-3. $ gulp 
+1. $ git clone https://github.com/wilmaribg/usc-model-component.git usc-my-component
+2. $ cd usc-my-component
+3. $ npm install
+4. $ gulp 
 
 ## Uso
 
